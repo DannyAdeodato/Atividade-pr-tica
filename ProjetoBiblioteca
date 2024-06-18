@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Biblioteca Online</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Biblioteca Online</h1>
+    <nav>
+      <ul>
+        <li><a href="#" id="inicio">Início</a></li>
+        <li><a href="#" id="livros">Livros</a></li>
+        <li><a href="#" id="autores">Autores</a></li>
+        <li><a href="#" id="categorias">Categorias</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2 id="titulo-livros-destaque">Livros em Destaque</h2>
+    <div id="livros-destaque" class="livros-destaque">
+      <!-- Aqui você pode exibir os livros em destaque -->
+    </div>
+
+    <h2 id="titulo-categorias">Categorias</h2>
+    <ul id="categorias-list" class="categorias">
+      <!-- Aqui você pode listar as categorias disponíveis -->
+    </ul>
+
+    <h2 id="titulo-autores">Autores</h2>
+    <ul id="autores-list" class="autores">
+      <!-- Aqui você pode listar os autores disponíveis -->
+    </ul>
+  </main>
+  <footer>
+    <p>&copy; 2021 Biblioteca Online. Todos os direitos reservados.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://p.turbosquid.com/ts-thumb/g8/qN1Dym/0BUgOgZ9/bc3/jpg/1095387318/1920x1080/fit_q87/a95304f079fe21ab6c303a96459d1dada2899672/bc3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header {
+  background-color: #fff;
+  color: #333;
+  padding: 10px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.livros-destaque {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.categorias, .autores {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+document.getElementById("inicio").addEventListener("click", function() {
+  // Lógica para exibir a página inicial
+  console.log("Clicou em Início");
+});
+
+document.getElementById("livros").addEventListener("click", function() {
+  // Lógica para exibir a página de livros
+  console.log("Clicou em Livros");
+});
+
+document.getElementById("autores").addEventListener("click", function() {
+  // Lógica para exibir a página de autores
+  console.log("Clicou em Autores");
+});
+
+document.getElementById("categorias").addEventListener("click", function() {
+  // Lógica para exibir a página de categorias
+  console.log("Clicou em Categorias");
+});
+
+// Exemplo de como preencher os livros em destaque
+var livrosDestaque = document.getElementById("livros-destaque");
+livrosDestaque.innerHTML = "<div>Livro 1</div><div>Livro 2</div><div>Livro 3</div>";
+
+// Exemplo de como preencher as categorias
+var categoriasList = document.getElementById("categorias-list");
+categoriasList.innerHTML = "<li>Ficção</li><li>Romance</li><li>Suspense</li>";
+
+// Exemplo de como preencher os autores
+var autoresList = document.getElementById("autores-list");
+autoresList.innerHTML = "<li>Autor 1</li><li>Autor 2</li><li>Autor 3</li>";
